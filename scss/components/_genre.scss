@@ -1,0 +1,10 @@
+@use '../util' as u;
+
+.genre-container__genres {
+  padding: u.rem(5) u.rem(15);
+  box-shadow: 0 u.rem(3) u.rem(5) 0 rgba(0, 0, 0, 0.19);
+  border-radius: u.rem(12);
+  cursor: pointer;
+  color: white;
+  max-width: u.rem(300);
+}

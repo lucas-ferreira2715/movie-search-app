@@ -1,0 +1,65 @@
+@use '../util' as u;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: u.rem(40);
+  padding: 0 u.rem(15);
+ // margin-inline: auto;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: u.rem(55);
+}
+
+.genre-container {
+  display: grid;
+  grid-template-columns: repeat(2, calc(u.rem(115) + 10vw));
+  gap: u.rem(15);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @include u.breakpoint(medium) {
+    display: grid;
+    grid-template-columns: repeat(4, calc(u.rem(150) + 0.5vw));
+  }
+
+  @include u.breakpoint(large) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: u.rem(900);
+    margin: 0 auto;
+  }
+}
+
+.movie-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: u.rem(30) u.rem(20);
+  color: white;
+
+  @include u.breakpoint(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @include u.breakpoint(large) {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @include u.breakpoint(x-large) {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+  }
+}

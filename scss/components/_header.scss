@@ -1,0 +1,60 @@
+@use '../util' as u;
+
+.header-container {
+  
+  h1 {
+    font-size: clamp(u.rem(28), u.rem(16) + 2vw, u.rem(40));
+    letter-spacing: u.rem(0.9);
+    color: white;
+  }
+
+  h1 span {
+    color: red;
+  }
+}
+
+.search-container {
+  height: u.rem(45);
+  margin-top: u.rem(35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    height: 100%;
+    padding-left: u.rem(25);
+    width: 70vw;
+    max-width: u.rem(900);
+    border: none;
+    outline: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(u.rem(10), u.rem(12) + 0.5vw, u.rem(14));
+    background-color: var(--dark-color);
+    color: white;
+    border-top-left-radius: u.rem(20);
+    border-bottom-left-radius: u.rem(20);
+    box-shadow: u.rem(5) u.rem(5) u.rem(7) #1c1d1f;
+  }
+
+  button {
+    height: 100%;
+    padding: 0 u.rem(15);
+    border: none;
+    background-color: var(--dark-color);
+    box-shadow: u.rem(5) u.rem(5) u.rem(7) #1c1d1f;
+    border-top-right-radius: u.rem(20);
+    border-bottom-right-radius: u.rem(20);
+    cursor: pointer;
+    transition: all 0.2 ease;
+  }
+
+  button:active {
+    transform: scale(0.96);
+  }
+
+  button img {
+    width: u.rem(25);
+    height: u.rem(25);
+    object-fit: cover;
+  }
+}
